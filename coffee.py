@@ -13,4 +13,6 @@ class Coffee:
     def name(self):
         return self._name
 
-    
+     @name.setter
+    def name(self, _):
+        raise Exception("Coffee name cannot be changed after creation")
