@@ -10,10 +10,14 @@ class Order:
 
         if not isinstance(customer, Customer):
             raise Exception("Invalid customer")
+
+
         if not isinstance(coffee, Coffee):
             raise Exception("Invalid coffee")
+
+            
         if not isinstance(price, (int, float)):
-            raise Exception("Price must be numeric")
+            raise Exception("Price must be numeric") #validations for price
 
         price = float(price)
         if not (1.0 <= price <= 10.0):
