@@ -12,7 +12,7 @@ class Customer:
     def name(self):
       return self._name
 
-        @name.setter
+        @name.setter       #validations for name length and exceptions 
     def name(self, value):
         if not isinstance(value, str):
             raise Exception("Name must be a string")
