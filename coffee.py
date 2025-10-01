@@ -5,7 +5,7 @@ class Coffee:
 
     def __init__(self, name: str): 
         if not isinstance(name, str) or len(name) < 3:
-            raise Exception("Coffee name must be a string with at least 3 chars")
+            raise Exception("Coffee name must be a string with at least 3 chars")#validations for coffee name 
         self._name = name
         Coffee.all.append(self)
 
