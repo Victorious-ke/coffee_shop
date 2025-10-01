@@ -8,16 +8,18 @@ class Order:
         from customer import Customer
         from coffee import Coffee
 
+
+              #Customer and Coffee name validations for existng coffee and customer
         if not isinstance(customer, Customer):
-            raise Exception("Invalid customer")
+            raise Exception("customer must be a Customer")
 
 
         if not isinstance(coffee, Coffee):
-            raise Exception("Invalid coffee")
+            raise Exception(" coffee must be a Coffee")
 
-            
+
         if not isinstance(price, (int, float)):
-            raise Exception("Price must be numeric") #validations for price
+            raise Exception("Price must be number") #validations for price number and fload
 
         price = float(price)
         if not (1.0 <= price <= 10.0):
