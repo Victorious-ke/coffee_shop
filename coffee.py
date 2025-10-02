@@ -31,7 +31,13 @@ class Coffee:
         if not orders:
             return 0
         return sum(order.price for order in orders) / len(orders)
+    @classmethod
+    def most_aficionado(cls, coffee):
+        """Find the customer who spent the most on a given coffee"""
+        spend = {}
+        for order in coffee.orders():
+            spend[order.customer] = spend.get(order.customer, 0) + order.price
+        if not spend:
+            return None
+        return max(spend, key=spend.get)
 
-
-
-        

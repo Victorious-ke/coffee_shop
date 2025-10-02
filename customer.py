@@ -12,7 +12,7 @@ class Customer:
     def name(self):
       return self._name
 
-        @name.setter       #validations for name length and exceptions 
+    @name.setter       #validations for name length and exceptions 
     def name(self, value):
         if not isinstance(value, str):
             raise Exception("Name must be a string")
@@ -20,7 +20,7 @@ class Customer:
             raise Exception("Name must be between 1 and 15 characters")
         self._name = value
     def orders(self):
-    """All orders for this customer"""
+        """All orders for this customer"""
         return [order for order in Order.all if order.customer is self]
 
     def coffees(self):
