@@ -1,16 +1,13 @@
 #ocurs when a 
 
-from coffee_shop.customer import Customer
-from coffee_shop.coffee import Coffee
-
-
 class Order:
 
     all = []
 
     def __init__(self, customer, coffee, price: float):
-        from customer import Customer
-        from coffee import Coffee
+       
+        from coffee_shop.customer import Customer
+        from coffee_shop.coffee import Coffee
 
 
               #Customer and Coffee name validations for existng coffee and customer
