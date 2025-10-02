@@ -1,26 +1,25 @@
-from coffee_shop.order import Order
-
-#create class 
 class Customer:
-  all = []
+    all = []
 
-  def __init__(self, name: str):
-    self.name = name
-    Customer.all.append(self)
+    def __init__(self, name: str):
+        self.name = name
+        Customer.all.append(self)
 
     @property
     def name(self):
-      return self._name
+        return self._name
 
-    @name.setter       #validations for name length and exceptions 
+    @name.setter  # validations for name length and exceptions
     def name(self, value):
         if not isinstance(value, str):
             raise Exception("Name must be a string")
         if not (1 <= len(value) <= 15):
             raise Exception("Name must be between 1 and 15 characters")
         self._name = value
+
     def orders(self):
         """All orders for this customer"""
+        from coffee_shop.order import Order
         return [order for order in Order.all if order.customer is self]
 
     def coffees(self):
@@ -29,7 +28,5 @@ class Customer:
 
     def create_order(self, coffee, price: float):
         """Create a new Order linked to this customer"""
+        from coffee_shop.order import Order
         return Order(self, coffee, price)
-
-
-    

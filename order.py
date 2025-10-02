@@ -1,5 +1,9 @@
 #ocurs when a 
 
+from coffee_shop.customer import Customer
+from coffee_shop.coffee import Coffee
+
+
 class Order:
 
     all = []
